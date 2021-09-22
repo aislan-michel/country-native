@@ -67,6 +67,10 @@ export function Home() {
         return countries.filter(c => c.code === code).length > 0;
     }
     
+    function countryExists():boolean{
+        return countries.filter(c => c.name === name).length > 0;
+    }
+    
     function validations():boolean {
         const title: string = 'oh no...';
         const messages: string[] = [];
@@ -74,6 +78,11 @@ export function Home() {
         if(codeExists()){
             messages.push('code already exists');
             setCode('');
+        }
+
+        if(countryExists()){
+            messages.push('country already exists');
+            setName('');
         }
         
         if(IsNullOrEmpty(code)){

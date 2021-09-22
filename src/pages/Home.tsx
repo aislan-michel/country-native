@@ -105,28 +105,27 @@ export function Home() {
 
                 <Add onPress={handleAddNewCountry} />
 
-                <DataTable style={styles.tableContainer}>
-                    <DataTable.Header>
-                        <DataTable.Title>
-                            <Text style={styles.tableItem}>
-                                Code
-                            </Text>
-                        </DataTable.Title>
-                        
-                        <DataTable.Title>
-                            <Text style={styles.tableItem}>
-                                Name
-                            </Text>
-                        </DataTable.Title>
-                        
-                        <DataTable.Title>
-                            <Text style={styles.tableItem}>
-                                
-                            </Text>
-                        </DataTable.Title>
-                    </DataTable.Header>
-                    
-                    <ScrollView>
+                <ScrollView>
+                    <DataTable style={styles.tableContainer}>
+                        <DataTable.Header>
+                            <DataTable.Title>
+                                <Text style={styles.tableItem}>
+                                    Code
+                                </Text>
+                            </DataTable.Title>
+
+                            <DataTable.Title>
+                                <Text style={styles.tableItem}>
+                                    Name
+                                </Text>
+                            </DataTable.Title>
+
+                            <DataTable.Title>
+                                <Text style={styles.tableItem}>
+
+                                </Text>
+                            </DataTable.Title>
+                        </DataTable.Header>
                         {
                             countries && countries.length > 0 ?
                                 countries.map(item => {
@@ -151,9 +150,9 @@ export function Home() {
                                 :
                                 false
                         }
-                    </ScrollView>
-                </DataTable>
-                
+                    </DataTable>
+                </ScrollView>
+
                 <Text style={styles.totalCount}>total of countries: {countries.length}</Text>
             </View>
         </>
@@ -181,10 +180,9 @@ const styles = StyleSheet.create({
         borderRadius: 7
     },
     tableContainer: {
-        paddingTop: 20,
         padding: 15,
         borderRadius: 7,
-        marginTop: 30
+        marginTop: 15
     },
     tableItem: {
         fontSize: 16,
@@ -194,6 +192,6 @@ const styles = StyleSheet.create({
         color: 'white',
         fontSize: 24,
         fontWeight: 'bold',
-        paddingTop: 20
+        paddingTop: 5
     }
 });
